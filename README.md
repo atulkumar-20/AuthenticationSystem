@@ -2,7 +2,7 @@
 
 A full-stack user management application with authentication, built with the MERN stack (MongoDB, Express, React, Node.js).
 
-Live : 
+Demo : [Video Demo](./web/public/Demo.mp4)
 
 ## Tech Stack
 
