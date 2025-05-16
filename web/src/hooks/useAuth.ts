@@ -15,11 +15,11 @@ export const useAuth = () => {
 
   const handleAuthSuccess = (data: AuthResponse) => {
     const user = {
-    id: data._id || data.id,
-    name: data.name,
-    email: data.email,
-    dateOfBirth: data.dateOfBirth
-  };
+      id: data._id || data.id,
+      name: data.name,
+      email: data.email,
+      dateOfBirth: data.dateOfBirth,
+    };
     localStorage.setItem('token', data.token);
     localStorage.setItem('user', JSON.stringify(user));
     toast.success(`Welcome ${user.name}`);
@@ -66,8 +66,6 @@ export const useAuth = () => {
   const getUser = () => {
     try {
       const userData = localStorage.getItem('user');
-
-      // Handle cases where stored value is "undefined" string
       if (userData === 'undefined' || userData === null) {
         return null;
       }
@@ -75,7 +73,6 @@ export const useAuth = () => {
       return JSON.parse(userData);
     } catch (error) {
       console.error('Error parsing user data:', error);
-      // Clear invalid user data
       localStorage.removeItem('user');
       return null;
     }

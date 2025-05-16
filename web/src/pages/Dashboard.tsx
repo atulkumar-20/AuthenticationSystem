@@ -189,7 +189,7 @@ export const Dashboard = () => {
           transition={{ delay: 0.3, duration: 0.5 }}
           className="bg-gray-800/90 backdrop-blur-sm p-3 sm:p-4 rounded-lg text-xs sm:text-sm text-gray-300 border border-gray-700"
         >
-          Note: When the user gets login they will be added to the table and can delete other users except themselves.
+          Note: Hey {user?.name}, You are logged in and now you can delete other users except yourself.
         </motion.div>
       </motion.div>
     </div>

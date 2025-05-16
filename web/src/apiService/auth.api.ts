@@ -10,7 +10,7 @@ import type {
 const API_BASE_URL = 'http://localhost:8000/api/auth';
 
 const api = axios.create({
-  baseURL: API_BASE_URL,
+  baseURL: import.meta.env.MODE === 'development' ? API_BASE_URL : '/api/auth',
   withCredentials: false,
   headers: {
     'Content-Type': 'application/json',
