@@ -25,7 +25,7 @@ export const HomePage = () => {
           transition={{ delay: 0.4, duration: 0.5 }}
           className="text-2xl sm:text-3xl md:text-4xl font-bold text-white mb-6 sm:mb-8"
         >
-          Here's Your Assignment Senpai
+          Here's Your Assignment Sensei
         </motion.h2>
 
         <motion.p
