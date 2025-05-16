@@ -4,7 +4,7 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "build":"pnpm install --prefix api && pnpm install --prefix web && pnpm build --prefix web",
+    "build":"pnpm install --prefix api && pnpm install --prefix web && cd web && pnpm run build",
     "start":"pnpm start --prefix api"
   },
   "keywords": [],
