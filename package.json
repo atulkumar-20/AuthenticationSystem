@@ -4,8 +4,11 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "build":"pnpm install --prefix api && pnpm install --prefix web && cd web && pnpm run build",
-   "start": "cd api && pnpm start"
+    "install:api": "cd api && pnpm install",
+    "install:web": "cd web && pnpm install",
+    "build:web": "cd web && pnpm run build",
+    "build": "pnpm run install:api && pnpm run install:web && pnpm run build:web",
+    "start": "cd api && pnpm run start"
   },
   "keywords": [],
   "author": "",
